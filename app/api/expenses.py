@@ -22,7 +22,7 @@ def create_expenses(payload: ExpenseCreate, conn=Depends(get_connection)):
 @router.get("", status_code=status.HTTP_200_OK, response_model=list[ExpenseOut])
 def get_sorted_expenses(
     conn=Depends(get_connection),
-    category: Annotated[str | None, Query(min_length=1, max_length=20)] = None,
+    category: Annotated[str | None, Query(min_length=1, max_length=15)] = None,
     limit: Annotated[int, Query(ge=1, le=100)] = 50,
     skip: Annotated[int, Query(ge=0)] = 0,
     ):
