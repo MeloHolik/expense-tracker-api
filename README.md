@@ -6,7 +6,7 @@ Backend-сервис для управления личными финансам
 - **Backend:** Python (FastAPI), Pydantic (Валидация данных)
 - **Database:** SQLite
 - **Documentation:** Swagger (OpenAPI), Confluence (ведение требований и чек-листов, спецификация API), Jira (Баг-трекинг)
-- **Testing Tools:** Postman (JS scripts), Pytest (в процессе)
+- **Testing Tools:** Postman (JS scripts), Pytest (в процессе), DBeaver
 
 ---
 
