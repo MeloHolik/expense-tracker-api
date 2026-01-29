@@ -4,7 +4,7 @@ from datetime import datetime
 
 class ExpenseCreate(BaseModel):
     category: str = Field(min_length=1, max_length=15)
-    amount: float = Field(gt=0)
+    amount: float = Field(gt=0, le=100000)
     comment: str | None = Field(default=None, max_length=50)
 
 
@@ -24,5 +24,5 @@ class CategorySummary(BaseModel):
 
 class ExpenseUpdate(BaseModel):
     category: str = Field(default=None, min_length=1, max_length=15)
-    amount: float = Field(default=None, gt=0)
+    amount: float = Field(default=None, gt=0, le=100000)
     comment: str | None = Field(default=None, max_length=50)
