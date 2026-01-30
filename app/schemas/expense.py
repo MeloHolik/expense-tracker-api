@@ -23,6 +23,6 @@ class CategorySummary(BaseModel):
     average_bill: float
 
 class ExpenseUpdate(BaseModel):
-    category: str = Field(default=None, min_length=1, max_length=15)
-    amount: float = Field(default=None, gt=0, le=100000)
+    category: str | None = Field(default=None, min_length=1, max_length=15)
+    amount: float | None = Field(default=None, gt=0, le=100000)
     comment: str | None = Field(default=None, max_length=50)
